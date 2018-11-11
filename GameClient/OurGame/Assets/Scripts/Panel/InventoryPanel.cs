@@ -5,7 +5,6 @@ using UnityEngine;
 public class InventoryPanel : BasePanel {
     private CanvasGroup canvasGroup;
 
-
     private void Start()
     {
         if (canvasGroup == null) canvasGroup = GetComponent<CanvasGroup>();

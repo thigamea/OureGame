@@ -50,7 +50,9 @@ public class UIManager
         if(panelStack.Count>0)
         {
             BasePanel topPanel = panelStack.Peek();
-            topPanel.OnPause();
+            //topPanel.OnPause();
+            topPanel.OnExit();
+            panelStack.Pop();
         }
         BasePanel panel = GetPanel(panelType);
         panel.OnEnter();

@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurGame", "OurGame.csproj", "{FCCE5B6E-252D-9094-30D1-DF2BFE00AF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurGame.Editor", "OurGame.Editor.csproj", "{91117055-53F9-E648-ED43-C5663343151D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 		{FCCE5B6E-252D-9094-30D1-DF2BFE00AF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCCE5B6E-252D-9094-30D1-DF2BFE00AF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCCE5B6E-252D-9094-30D1-DF2BFE00AF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91117055-53F9-E648-ED43-C5663343151D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91117055-53F9-E648-ED43-C5663343151D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91117055-53F9-E648-ED43-C5663343151D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91117055-53F9-E648-ED43-C5663343151D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7D5C60E-6A30-4E3E-99FA-7F397DD0BF3B}
 	EndGlobalSection
 EndGlobal
