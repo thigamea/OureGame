@@ -1,0 +1,25 @@
+{
+	"infoList":
+	[
+		{"panelTypeString":"MainMenu",
+		"path":"UIPanel/MainMenuPanel"},
+
+		{"panelTypeString":"Status",
+		"path":"UIPanel/StatusPanel"},
+
+		{"panelTypeString":"Practice",
+		"path":"UIPanel/PracticePanel"},
+
+		{"panelTypeString":"Pet",
+		"path":"UIPanel/PetPanel"},
+
+		{"panelTypeString":"Factions",
+		"path":"UIPanel/FactionsPanel"},
+
+		{"panelTypeString":"More",
+		"path":"UIPanel/MorePanel"},
+		
+		{"panelTypeString":"Inventory",
+		"path":"UIPanel/InventoryPanel"}
+	]
+}
