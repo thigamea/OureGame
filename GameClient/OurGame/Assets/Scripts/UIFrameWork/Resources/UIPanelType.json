@@ -18,7 +18,10 @@
 
 		{"panelTypeString":"More",
 		"path":"UIPanel/MorePanel"},
-		
+
+		{"panelTypeString":"Login",
+		"path":"UIPanel/LoginPanel"},
+
 		{"panelTypeString":"Inventory",
 		"path":"UIPanel/InventoryPanel"}
 	]

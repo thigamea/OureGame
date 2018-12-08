@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class UIManager
+public class UIManager:BaseManager
 {
     #region 单例 1.定义一个静态对象 外界访问 内部构造 2. 构造方法私有化
     private static UIManager _instance;
@@ -13,6 +13,7 @@ public class UIManager
         {
             if (_instance == null)
             {
+                Debug.Log("新生成了一个对象");
                 _instance = new UIManager();
             }
             return _instance;
@@ -23,8 +24,13 @@ public class UIManager
     { 
         ParseUIPanelTypeJson();
     }
+     public override void OnInit()
+    {
+
+    }
     #endregion 
     private Transform canvasTransform;
+    private UIPanelType panelTypeToPush = UIPanelType.NONE;
     private Transform CanvasTransform
     {
         get
@@ -76,7 +82,16 @@ public class UIManager
         BasePanel topPanel = panelStack.Peek();
         topPanel.OnResume();
     }
-   
+    public override void Update()
+    {
+        Debug.Log("正在刷新");
+        if (panelTypeToPush != UIPanelType.NONE)
+        {
+            Debug.Log("改变了界面");
+            PushPanel(panelTypeToPush);
+            panelTypeToPush = UIPanelType.NONE;
+        }
+    }
     /// <summary>
     /// 根据面板类型，得到实例化面板
     /// </summary>
@@ -121,6 +136,11 @@ public class UIManager
         {
             panelPathDict.Add(info.panelType, info.path);
         }
+    }
+    public void PushPanelSync(UIPanelType panelType)
+    {
+        Debug.Log("切换界面");
+        panelTypeToPush = panelType;
     }
  
 }
