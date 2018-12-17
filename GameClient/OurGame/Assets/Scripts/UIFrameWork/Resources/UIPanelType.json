@@ -22,6 +22,12 @@
 		{"panelTypeString":"Login",
 		"path":"UIPanel/LoginPanel"},
 
+        {"panelTypeString":"Register",
+		"path":"UIPanel/RegisterPanel"},
+
+        {"panelTypeString":"Create",
+		"path":"UIPanel/CreatePanel"},
+
 		{"panelTypeString":"Inventory",
 		"path":"UIPanel/InventoryPanel"}
 	]

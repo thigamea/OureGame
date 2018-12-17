@@ -17,15 +17,26 @@ public class GameFacade : MonoBehaviour
             return _instance;
         }
     }
+    /// <summary>
+    ///  管理类
+    /// </summary>
 
     public UIManager uiMng;
+    public DataManager dataManager;
     private RequestManager requestMng;
     private ClientManager clientMng;
 
-
+    /// <summary>
+    /// 状态管理
+    /// </summary>
+    public GameObject mainPancel;
+    public bool isLogin = false;
+    public bool isLoad = false;
+    public string username;
     private void Awake()
     {
         uiMng = UIManager.Instance;
+        dataManager = DataManager.Instance;
     }
 
     // Use this for initialization
@@ -37,6 +48,8 @@ public class GameFacade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isLogin)
+            mainPancel.SetActive(true);
         UpdateManager();
     }
 
@@ -52,6 +65,7 @@ public class GameFacade : MonoBehaviour
         requestMng.OnInit();
         clientMng.OnInit();
         uiMng.OnInit();
+        dataManager.daterequest.RegisterAction();
     }
     private void DestroyManager()
     {

@@ -8,7 +8,7 @@ public class BasePanel : MonoBehaviour {
     /// </summary>
 	public virtual void OnEnter()
     {
-
+        this.gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -32,6 +32,6 @@ public class BasePanel : MonoBehaviour {
     /// </summary>
     public virtual void OnExit()
     {
-
+        this.gameObject.SetActive(false);
     }
 }

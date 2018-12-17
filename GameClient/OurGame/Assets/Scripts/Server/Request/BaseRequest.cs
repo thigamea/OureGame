@@ -20,6 +20,7 @@ public class BaseRequest : MonoBehaviour
     // Use this for initialization
     public virtual void Awake()
     {
+        Debug.Log(actionCode);
         facade.AddRequest(actionCode, this);
     }
 

@@ -84,10 +84,8 @@ public class UIManager:BaseManager
     }
     public override void Update()
     {
-        Debug.Log("正在刷新");
         if (panelTypeToPush != UIPanelType.NONE)
         {
-            Debug.Log("改变了界面");
             PushPanel(panelTypeToPush);
             panelTypeToPush = UIPanelType.NONE;
         }

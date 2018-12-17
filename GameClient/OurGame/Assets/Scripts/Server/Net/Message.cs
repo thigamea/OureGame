@@ -45,6 +45,7 @@ public class Message
                 //Console.WriteLine("解析出来一条数据：" + s);
                 ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 4);
                 string s = Encoding.UTF8.GetString(data, 8, count - 4);
+                Debug.Log("action" + actionCode);
                 processDataCallback(actionCode, s);
                 Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
                 startIndex -= (count + 4);

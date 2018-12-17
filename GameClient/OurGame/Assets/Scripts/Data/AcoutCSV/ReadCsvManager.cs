@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ReadCsvManager : MonoBehaviour {
-    private static ReadCsvManager instance=new ReadCsvManager();
+    private static ReadCsvManager instance;
     public int c = 10;
     public static ReadCsvManager Instance
     {
         get
         {
             if (instance == null)
-                instance = new ReadCsvManager();
+                instance = GameObject.Find("GameFacade").GetComponent<ReadCsvManager>();
             return instance;
-        }
+        }   
     }
-    List<LevData> levdata;
+   public List<LevData> levdata;
+    void Awake()
+    {
+        levdata = ReadLexData();
+        Debug.Log(levdata[0].currName+"当前目标经验："+levdata[0].targetExp);
+    }
+
    public List<LevData> ReadLexData()
     {
          levdata=new List<LevData>();

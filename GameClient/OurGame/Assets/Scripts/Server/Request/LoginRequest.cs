@@ -14,23 +14,19 @@ public class LoginRequest : BaseRequest
         loginPanel = GetComponent<LoginPanel>();
         base.Awake();
     }
-    void Update()
-    {
-       
-    }
     public void sendRequest(string username, string password)
     {
         string data = username + "," + password;
         base.SendRequest(data);
     }
-
-
     public override void OnResponse(string data)
     {
         string[] strs = data.Split(',');
         Debug.Log("进入成功");
         ReturnCode returnCode = (ReturnCode)int.Parse(strs[0]);
-        loginPanel.OnLoginResponse(returnCode);
+        ReturnCode hasAccount = (ReturnCode)int.Parse(strs[1]);
+        GameFacade.Instance.username = strs[2];
+        loginPanel.OnLoginResponse(returnCode,hasAccount);
         if (returnCode == ReturnCode.Success)
         {
    

@@ -40,7 +40,7 @@ public class ClientManager : BaseManager
     }
     private void ReceiveCallback(IAsyncResult ar)
     {
-        Debug.Log("输出成功");
+
         try
         {
             if (clientSocket == null || clientSocket.Connected == false) return;
@@ -61,7 +61,6 @@ public class ClientManager : BaseManager
     }
     public void SendRequest(RequestCode requestCode, ActionCode actionCode, string data)
     {
-        Debug.Log("成功发送数据");
         byte[] bytes = Message.PackData(requestCode, actionCode, data);
         clientSocket.Send(bytes);
     }

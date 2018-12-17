@@ -5,11 +5,13 @@ using UnityEngine;
 public enum UIPanelType  {
     NONE,
     MainMenu,
+    Register,
     Status,
     Practice,
     Pet,
     Factions,
     More,
     Inventory,
+    Create,
     Login
 }
